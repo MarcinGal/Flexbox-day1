@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Pojemnik - display flex 
+6 właściwości dla flex-containera*/
+.flex-container{
+    display: flex;
+    flex-direction: row; /* / row-reverse / column / column-reverse */
+    flex-wrap: wrap;     /* nowrap / wrap-reverse /  */
+        flex-flow: row wrap; /*właściwość zbiorcza dla direction i wrap, 
+                              kolejność wpisywania jest dowolna*/ 
+    justify-content:
+        /* 
+
+align-items:
+align-content: */
+
+} 
+
+div.box{
+    background-color: #234;
+    height: 100px;
+    margin: 10px;
+    width: 20vw;
+    height: 20vw;
+    }
