@@ -2,28 +2,48 @@
     margin: 0;
     padding: 0;
 }
-
-
-/* Pojemnik - display flex 
-6 właściwości dla flex-containera*/
-.flex-container{
-    display: flex;
-    flex-direction: row; /* / row-reverse / column / column-reverse */
-    flex-wrap: wrap;     /* nowrap / wrap-reverse /  */
-        flex-flow: row wrap; /*właściwość zbiorcza dla direction i wrap, 
-                              kolejność wpisywania jest dowolna*/ 
-    justify-content:
-        /* 
-
-align-items:
-align-content: */
-
-} 
-
 div.box{
     background-color: #234;
     height: 100px;
     margin: 10px;
-    width: 20vw;
-    height: 20vw;
+    width: 100px;
+    height:100px;
     }
+.box:nth-of-type(2){
+    background-color: #aaf;
+    height: 30vh;
+    order: -1;
+}
+.box:nth-last-of-type(1)
+{
+    flex-grow: 2;
+}
+
+/* Pojemnik - display flex 
+6 właściwości dla flex-containera*/
+.flex-container{
+    background-color: #eee;
+    height: 100vh;
+    display: flex;
+    flex-direction: row; /* / row, row-reverse, column, column-reverse */
+    flex-wrap: wrap;     /* wrap, nowrap, wrap-reverse /  */
+        flex-flow: row wrap; /*właściwość zbiorcza dla direction i wrap, 
+                              kolejność wpisywania jest dowolna*/ 
+    justify-content: center; /* flex-start, flex-end, center, space-aroun, space-between */
+    align-items: center;; /*i pozostałe jak w align-content*/
+    align-content: space-around; /* stretch, flex-start, flex-end. center. space around, space-between*/
+} 
+
+/* 6 właściwości dla elementów flexowych*/
+div.box{
+order: 0; /* bazowo każdy element ma 0 */
+flex-grow: 0; /*rośnięcie, domyślnie 0*/
+flex-shrink: 1; /*kurczenie, domyślnie 1; */
+flex-basis: 100; /*szerokość*/
+flex: 0 1 100px; /* zbiorczca, flex-grow, flex-shrink, flex-basis */
+align-self: 100px;  /*wyrównanie konkretnego elementu wewnątrz pojemnika*/
+ /*
+
+
+*/
+}
